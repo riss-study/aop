@@ -3,6 +3,7 @@ package dev.riss.aop;
 import dev.riss.aop.order.OrderRepository;
 import dev.riss.aop.order.OrderService;
 import dev.riss.aop.order.aop.AspectV1;
+import dev.riss.aop.order.aop.AspectV2;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,8 @@ import org.springframework.context.annotation.Import;
 
 @Slf4j
 @SpringBootTest
-@Import(AspectV1.class)
+//@Import(AspectV1.class)
+@Import(AspectV2.class)
 public class AopTest {
 
   @Autowired
