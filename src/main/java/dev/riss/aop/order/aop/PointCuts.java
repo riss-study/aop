@@ -1,0 +1,16 @@
+package dev.riss.aop.order.aop;
+
+import org.aspectj.lang.annotation.Pointcut;
+
+public class PointCuts {
+
+  @Pointcut("execution(* dev.riss.aop.order..*(..))")
+  public void allOrder() {}   // pointcut signature
+
+  // 클래스 이름 패턴 *Service
+  @Pointcut("execution(* *..*Service.*(..))")
+  public void allService() {}
+
+  @Pointcut("allOrder() && allService()")
+  public void orderAndService() {}
+}
