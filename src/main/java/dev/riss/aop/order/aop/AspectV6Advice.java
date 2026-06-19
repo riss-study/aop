@@ -86,7 +86,7 @@ public class AspectV6Advice {
   }
 
   // joinPoint.proceed try-catch-finally 에서 finally 부분
-  // 엄연히 개념적으로는 메서드 호출 종료 시의 영역
+  // 엄연히 개념적으로는 메서드 호출 종료 시의 영역 (성공, 에러 상관없이 타겟 메서드 호출 종료 마지막에 실행)
   // 일반적으로 리소스 해제하는 데 사용
   @After(value = "dev.riss.aop.order.aop.PointCuts.orderAndService()")
   public void doAfter(JoinPoint joinPoint) {
