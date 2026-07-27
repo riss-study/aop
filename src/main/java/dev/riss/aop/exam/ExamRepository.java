@@ -1,5 +1,6 @@
 package dev.riss.aop.exam;
 
+import dev.riss.aop.exam.annotation.Trace;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -10,6 +11,7 @@ public class ExamRepository {
   /**
    * 5번에 1번 실패하는 요청 (의도적)
    */
+  @Trace
   public String save(String itemId) {
     seq++;
     if ((seq % 5) == 0) {
